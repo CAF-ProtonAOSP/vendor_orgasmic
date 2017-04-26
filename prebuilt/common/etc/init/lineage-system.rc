@@ -14,3 +14,7 @@ service bugreport /system/bin/dumpstate -d -p -z
     oneshot
     disabled
     keycodes 114 115 116
+
+on boot
+    # allow system to communicate pocket state
+    chown system system /sys/kernel/pocket_judge/inpocket
