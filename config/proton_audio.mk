@@ -1,10 +1,10 @@
 #
-# orgasmic Audio Files
+# proton Audio Files
 #
 
-ALARM_PATH := vendor/orgasmic/prebuilt/common/media/audio/alarms
-NOTIFICATION_PATH := vendor/orgasmic/prebuilt/common/media/audio/notifications
-RINGTONE_PATH := vendor/orgasmic/prebuilt/common/media/audio/ringtones
+ALARM_PATH := vendor/proton/prebuilt/common/media/audio/alarms
+NOTIFICATION_PATH := vendor/proton/prebuilt/common/media/audio/notifications
+RINGTONE_PATH := vendor/proton/prebuilt/common/media/audio/ringtones
 
 # Alarms
 PRODUCT_COPY_FILES += \

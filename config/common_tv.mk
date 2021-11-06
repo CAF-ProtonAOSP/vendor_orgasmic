@@ -1,5 +1,5 @@
 # Inherit common Lineage stuff
-$(call inherit-product, vendor/orgasmic/config/common.mk)
+$(call inherit-product, vendor/proton/config/common.mk)
 
 # Inherit Lineage atv device tree
 $(call inherit-product, device/lineage/atv/lineage_atv.mk)
@@ -12,4 +12,4 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LineageCustomizer
 
-DEVICE_PACKAGE_OVERLAYS += vendor/orgasmic/overlay/tv
+DEVICE_PACKAGE_OVERLAYS += vendor/proton/overlay/tv

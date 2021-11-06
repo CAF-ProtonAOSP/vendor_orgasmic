@@ -17,7 +17,7 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# orgasmic OTA update package
+# proton OTA update package
 
 ORGASMIC_TARGET_PACKAGE := $(PRODUCT_OUT)/Orgasmic-$(ORGASMIC_VERSION).zip
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
@@ -28,9 +28,9 @@ ifneq ($(IS_CIENV),true)
   CL_YLW="\033[33m"
 endif
 
-.PHONY: orgasmic otapackage bacon
+.PHONY: proton otapackage bacon
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
-orgasmic: otapackage
+proton: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(ORGASMIC_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(ORGASMIC_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(ORGASMIC_TARGET_PACKAGE).sha256sum
 	@echo -e ""
@@ -62,4 +62,4 @@ orgasmic: otapackage
 	@echo -e "size:` ls -lah $(ORGASMIC_TARGET_PACKAGE) | cut -d ' ' -f 5`"
 	@echo -e ""
 
-bacon: orgasmic
+bacon: proton

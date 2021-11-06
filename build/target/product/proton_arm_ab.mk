@@ -13,9 +13,9 @@
 # limitations under the License.
 
 $(call inherit-product, build/target/product/aosp_arm_ab.mk)
-include vendor/orgasmic/build/target/product/orgasmic_generic_target.mk
+include vendor/proton/build/target/product/proton_generic_target.mk
 
 TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_USES_64_BIT_BINDER := true
 
-PRODUCT_NAME := orgasmic_arm_ab
+PRODUCT_NAME := proton_arm_ab

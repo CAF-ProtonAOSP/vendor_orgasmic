@@ -1,4 +1,4 @@
-# Copyright (C) 2018-2020 The LineageOS Project
+# Copyright (C) 2019-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/orgasmic/build/target/product/orgasmic_generic_car_target.mk
+$(call inherit-product, vendor/proton/config/common_full_phone.mk)
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_x86_64.mk)
-
-PRODUCT_NAME := orgasmic_car_x86_64
+# Allow building otatools
+TARGET_FORCE_OTA_PACKAGE := true

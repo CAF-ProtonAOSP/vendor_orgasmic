@@ -1,5 +1,5 @@
-# Inherit common mobile orgasmic stuff
-$(call inherit-product, vendor/orgasmic/config/common.mk)
+# Inherit common mobile proton stuff
+$(call inherit-product, vendor/proton/config/common.mk)
 
 # Optional packages
 PRODUCT_PACKAGES += \

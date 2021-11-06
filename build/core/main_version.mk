@@ -6,13 +6,13 @@ endif
 
 CUSTOM_ROM_VERSION := 12.0.0
 
-# orgasmic Platform Display Version
+# proton Platform Display Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.orgasmic.display.version=$(ORGASMIC_DISPLAY_VERSION) \
-    ro.orgasmic.build.version=$(ORGASMIC_BUILD_VERSION) \
-    ro.orgasmic.build.date=$(BUILD_DATE) \
-    ro.orgasmic.buildtype=$(ORGASMIC_BUILD_TYPE) \
-    ro.orgasmic.fingerprint=$(ROM_FINGERPRINT) \
-    ro.orgasmic.version=$(ORGASMIC_VERSION) \
-    ro.modversion=$(ORGASMIC_VERSION)\
+    ro.proton.display.version=$(PROTON_DISPLAY_VERSION) \
+    ro.proton.build.version=$(PROTON_BUILD_VERSION) \
+    ro.proton.build.date=$(BUILD_DATE) \
+    ro.proton.buildtype=$(PROTON_BUILD_TYPE) \
+    ro.proton.fingerprint=$(ROM_FINGERPRINT) \
+    ro.proton.version=$(PROTON_VERSION) \
+    ro.modversion=$(PROTON_VERSION)\
     ro.build.version.custom=$(CUSTOM_ROM_VERSION)

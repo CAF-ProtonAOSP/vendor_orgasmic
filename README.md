@@ -1,1 +1,1 @@
-Orgasmic heart
+Proton heart

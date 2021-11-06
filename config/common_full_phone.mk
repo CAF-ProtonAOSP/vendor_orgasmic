@@ -1,11 +1,11 @@
 # Inherit full common Lineage stuff
-$(call inherit-product, vendor/orgasmic/config/common_full.mk)
+$(call inherit-product, vendor/proton/config/common_full.mk)
 
 # Required packages
 PRODUCT_PACKAGES += \
     LatinIME
 
 # Include Lineage LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/orgasmic/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/proton/overlay/dictionaries
 
-$(call inherit-product, vendor/orgasmic/config/telephony.mk)
+$(call inherit-product, vendor/proton/config/telephony.mk)

@@ -153,12 +153,12 @@ def fetch_query(remote_url, query):
 
 
 if __name__ == '__main__':
-    # Default to orgasmic Gerrit
-    default_gerrit = 'https://review.orgasmic-os.live'
+    # Default to proton Gerrit
+    default_gerrit = 'https://review.proton-os.live'
 
     parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description=textwrap.dedent('''\
         repopick.py is a utility to simplify the process of cherry picking
-        patches from orgasmic's Gerrit instance (or any gerrit instance of your choosing)
+        patches from proton's Gerrit instance (or any gerrit instance of your choosing)
 
         Given a list of change numbers, repopick will cd into the project path
         and cherry pick the latest patch available.
@@ -259,9 +259,9 @@ if __name__ == '__main__':
     # {project: {path, revision}}
 
     for project in projects:
-        name = project.get('name').replace("Orgasmic-OS/", "")
+        name = project.get('name').replace("Proton-OS/", "")
         # when name and path are equal, "repo manifest" doesn't return a path at all, so fall back to name
-        path = project.get('path', name).replace("Orgasmic-OS/", "")
+        path = project.get('path', name).replace("Proton-OS/", "")
         revision = project.get('upstream')
         if revision is None:
             for remote in remotes:
@@ -341,7 +341,7 @@ if __name__ == '__main__':
 
         mergables.append({
             'subject': review['subject'],
-            'project': review['project'].replace("Orgasmic-OS/", ""),
+            'project': review['project'].replace("Proton-OS/", ""),
             'branch': review['branch'],
             'change_id': review['change_id'],
             'change_number': review['number'],
@@ -373,7 +373,7 @@ if __name__ == '__main__':
         # Convert the project name to a project path
         #   - check that the project path exists
         project_path = None
-        item['project'].replace("Orgasmic-OS/", "")
+        item['project'].replace("Proton-OS/", "")
 
         if item['project'] in project_name_to_data and item['branch'] in project_name_to_data[item['project']]:
             project_path = project_name_to_data[item['project']][item['branch']]

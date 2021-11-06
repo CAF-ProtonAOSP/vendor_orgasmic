@@ -15,33 +15,33 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/orgasmic_arm.mk \
-    $(LOCAL_DIR)/orgasmic_arm64.mk \
-    $(LOCAL_DIR)/orgasmic_x86.mk \
-    $(LOCAL_DIR)/orgasmic_x86_64.mk \
-    $(LOCAL_DIR)/orgasmic_arm_ab.mk \
-    $(LOCAL_DIR)/orgasmic_arm64_ab.mk \
-    $(LOCAL_DIR)/orgasmic_x86_ab.mk \
-    $(LOCAL_DIR)/orgasmic_x86_64_ab.mk \
-    $(LOCAL_DIR)/orgasmic_tv_arm.mk \
-    $(LOCAL_DIR)/orgasmic_tv_arm64.mk \
-    $(LOCAL_DIR)/orgasmic_tv_x86.mk \
-    $(LOCAL_DIR)/orgasmic_tv_x86_64.mk \
-    $(LOCAL_DIR)/orgasmic_car_arm64.mk \
-    $(LOCAL_DIR)/orgasmic_car_x86_64.mk
+    $(LOCAL_DIR)/proton_arm.mk \
+    $(LOCAL_DIR)/proton_arm64.mk \
+    $(LOCAL_DIR)/proton_x86.mk \
+    $(LOCAL_DIR)/proton_x86_64.mk \
+    $(LOCAL_DIR)/proton_arm_ab.mk \
+    $(LOCAL_DIR)/proton_arm64_ab.mk \
+    $(LOCAL_DIR)/proton_x86_ab.mk \
+    $(LOCAL_DIR)/proton_x86_64_ab.mk \
+    $(LOCAL_DIR)/proton_tv_arm.mk \
+    $(LOCAL_DIR)/proton_tv_arm64.mk \
+    $(LOCAL_DIR)/proton_tv_x86.mk \
+    $(LOCAL_DIR)/proton_tv_x86_64.mk \
+    $(LOCAL_DIR)/proton_car_arm64.mk \
+    $(LOCAL_DIR)/proton_car_x86_64.mk
 
 COMMON_LUNCH_CHOICES := \
-    orgasmic_arm-userdebug \
-    orgasmic_arm64-userdebug \
-    orgasmic_x86-userdebug \
-    orgasmic_x86_64-userdebug \
-    orgasmic_arm_ab-userdebug \
-    orgasmic_arm64_ab-userdebug \
-    orgasmic_x86_ab-userdebug \
-    orgasmic_x86_64_ab-userdebug \
-    orgasmic_tv_arm-userdebug \
-    orgasmic_tv_arm64-userdebug \
-    orgasmic_tv_x86-userdebug \
-    orgasmic_tv_x86_64-userdebug \
-    orgasmic_car_arm64-userdebug \
-    orgasmic_car_x86_64-userdebug
+    proton_arm-userdebug \
+    proton_arm64-userdebug \
+    proton_x86-userdebug \
+    proton_x86_64-userdebug \
+    proton_arm_ab-userdebug \
+    proton_arm64_ab-userdebug \
+    proton_x86_ab-userdebug \
+    proton_x86_64_ab-userdebug \
+    proton_tv_arm-userdebug \
+    proton_tv_arm64-userdebug \
+    proton_tv_x86-userdebug \
+    proton_tv_x86_64-userdebug \
+    proton_car_arm64-userdebug \
+    proton_car_x86_64-userdebug

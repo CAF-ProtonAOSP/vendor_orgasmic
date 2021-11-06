@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := vendor/orgasmic/fonts
+LOCAL_PATH := vendor/proton/fonts
 
 # Copy font files
-include vendor/orgasmic/fonts/font_files.mk
--include vendor/orgasmic/fonts/extra/extra.mk
+include vendor/proton/fonts/font_files.mk
+-include vendor/proton/fonts/extra/extra.mk
 
 # Register custom fonts
 PRODUCT_COPY_FILES += \

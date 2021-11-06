@@ -12,10 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/orgasmic/build/target/product/orgasmic_generic_car_target.mk
+$(call inherit-product, build/target/product/aosp_x86.mk)
+$(call inherit-product, build/target/product/gsi_release.mk)
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_arm64.mk)
+include vendor/proton/build/target/product/proton_generic_target.mk
 
-TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_USES_64_BIT_BINDER := true
 
-PRODUCT_NAME := orgasmic_car_arm64
+PRODUCT_NAME := proton_x86
+
+PRODUCT_SDK_ADDON_NAME := proton
+PRODUCT_SDK_ADDON_SYS_IMG_SOURCE_PROP := $(LOCAL_PATH)/source.properties

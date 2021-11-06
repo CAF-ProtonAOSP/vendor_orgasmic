@@ -14,8 +14,8 @@
 
 $(call inherit-product, build/target/product/aosp_arm64_ab.mk)
 
-include vendor/orgasmic/build/target/product/orgasmic_generic_target.mk
+include vendor/proton/build/target/product/proton_generic_target.mk
 
 TARGET_NO_KERNEL_OVERRIDE := true
 
-PRODUCT_NAME := orgasmic_arm64_ab
+PRODUCT_NAME := proton_arm64_ab

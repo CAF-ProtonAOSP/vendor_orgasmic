@@ -12,15 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/google/atv/products/aosp_tv_x86.mk)
+$(call inherit-product, device/google/atv/products/aosp_tv_arm.mk)
 
-include vendor/orgasmic/build/target/product/orgasmic_generic_tv_target.mk
+include vendor/proton/build/target/product/proton_generic_tv_target.mk
 
+TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_USES_64_BIT_BINDER := true
 
-PRODUCT_NAME := orgasmic_tv_x86
+PRODUCT_NAME := proton_tv_arm
 
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS :=
-
-PRODUCT_SDK_ADDON_NAME := orgasmic
-PRODUCT_SDK_ADDON_SYS_IMG_SOURCE_PROP := $(LOCAL_PATH)/source.properties

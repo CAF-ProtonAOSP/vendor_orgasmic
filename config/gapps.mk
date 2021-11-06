@@ -4,11 +4,11 @@ $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 
 # # Common Overlay
 # DEVICE_PACKAGE_OVERLAYS += \
-#     vendor/orgasmic/overlay-gapps/common
+#     vendor/proton/overlay-gapps/common
 
 # # Exclude RRO Enforcement
 # PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS +=  \
-#     vendor/orgasmic/overlay-gapps
+#     vendor/proton/overlay-gapps
 
-# $(call inherit-product, vendor/orgasmic/config/rro_overlays.mk)
+# $(call inherit-product, vendor/proton/config/rro_overlays.mk)
 endif

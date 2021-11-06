@@ -1,6 +1,6 @@
-$(call inherit-product, vendor/orgasmic/themes/themes.mk)
+$(call inherit-product, vendor/proton/themes/themes.mk)
 
-# Orgasmic packages
+# Proton packages
 PRODUCT_PACKAGES += \
     ThemePicker \
     QuickAccessWallet \
@@ -9,7 +9,7 @@ PRODUCT_PACKAGES += \
     googleconf
 
 
-# Extra tools in Orgasmic
+# Extra tools in Proton
 PRODUCT_PACKAGES += \
     7z \
     bash \

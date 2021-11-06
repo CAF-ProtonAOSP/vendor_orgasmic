@@ -3,7 +3,7 @@
 # Copyright (C) 2012-2015, SlimRoms Project
 # Copyright (C) 2016-2017, AOSiP
 # Copyright (C) 2018, The Potato Open Sauce Project
-# Copyright (C) 2020, Orgasmic
+# Copyright (C) 2020, Proton
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -44,14 +44,14 @@ except ImportError:
 
 DEBUG = False
 
-custom_local_manifest = ".repo/local_manifests/orgasmic_manifest.xml"
+custom_local_manifest = ".repo/local_manifests/proton_manifest.xml"
 custom_default_revision = "twelve"
-custom_dependencies = "orgasmic.dependencies"
+custom_dependencies = "proton.dependencies"
 org_manifest = "devices"  # leave empty if org is provided in manifest
-org_display = "Orgasmic-Devices"  # needed for displaying
+org_display = "Proton-Devices"  # needed for displaying
 
 default_manifest = ".repo/manifests/default.xml"
-orgasmic_manifest = ".repo/manifests/snippets/orgasmic.xml"
+proton_manifest = ".repo/manifests/snippets/proton.xml"
 lineage_manifest = ".repo/manifests/snippets/lineage.xml"
 
 github_auth = None
@@ -183,7 +183,7 @@ def is_in_manifest(project_path):
 def add_to_manifest(repos, fallback_branch=None):
     lm = load_manifest(custom_local_manifest)
     mlm = load_manifest(default_manifest)
-    orgasmicm = load_manifest(orgasmic_manifest)
+    protonm = load_manifest(proton_manifest)
     lineagem = load_manifest(lineage_manifest)
 
     for repo in repos:
@@ -205,8 +205,8 @@ def add_to_manifest(repos, fallback_branch=None):
             continue
 
         existing_m_project = None
-        if exists_in_tree(orgasmicm, repo_path) != None:
-            existing_m_project = exists_in_tree(orgasmicm, repo_path)
+        if exists_in_tree(protonm, repo_path) != None:
+            existing_m_project = exists_in_tree(protonm, repo_path)
         elif exists_in_tree(lineagem, repo_path) != None:
             existing_m_project = exists_in_tree(lineagem, repo_path)
         elif exists_in_tree(mlm, repo_path) != None:
