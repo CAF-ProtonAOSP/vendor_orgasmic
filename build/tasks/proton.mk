@@ -19,7 +19,7 @@
 # -----------------------------------------------------------------
 # proton OTA update package
 
-ORGASMIC_TARGET_PACKAGE := $(PRODUCT_OUT)/Orgasmic-$(ORGASMIC_VERSION).zip
+PROTON_TARGET_PACKAGE := $(PRODUCT_OUT)/Proton-$(PROTON_VERSION).zip
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
 ifneq ($(IS_CIENV),true)
@@ -31,10 +31,10 @@ endif
 .PHONY: proton otapackage bacon
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 proton: otapackage
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(ORGASMIC_TARGET_PACKAGE)
-	$(hide) $(SHA256) $(ORGASMIC_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(ORGASMIC_TARGET_PACKAGE).sha256sum
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(PROTON_TARGET_PACKAGE)
+	$(hide) $(SHA256) $(PROTON_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(PROTON_TARGET_PACKAGE).sha256sum
 	@echo -e ""
-	@echo -e "${cya}Building ${bldcya}Orgasmic! ${txtrst}";
+	@echo -e "${cya}Building ${bldcya}Proton! ${txtrst}";
 	@echo -e ""
 	@echo -e ${CL_YLW}"                                                                     "
 	@echo -e ${CL_YLW}"                                                                     "
@@ -57,9 +57,9 @@ proton: otapackage
 	@echo -e ${CL_YLW}"                      ,,                                             "
 	@echo -e ${CL_GRN}"----- Happy Flashing! -----"
 	@echo -e ""
-	@echo -e "zip: "$(ORGASMIC_TARGET_PACKAGE)
-	@echo -e "sha256: `cat $(ORGASMIC_TARGET_PACKAGE).sha256sum | cut -d ' ' -f 1`"
-	@echo -e "size:` ls -lah $(ORGASMIC_TARGET_PACKAGE) | cut -d ' ' -f 5`"
+	@echo -e "zip: "$(PROTON_TARGET_PACKAGE)
+	@echo -e "sha256: `cat $(PROTON_TARGET_PACKAGE).sha256sum | cut -d ' ' -f 1`"
+	@echo -e "size:` ls -lah $(PROTON_TARGET_PACKAGE) | cut -d ' ' -f 5`"
 	@echo -e ""
 
 bacon: proton
