@@ -143,6 +143,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.feature.day_night_mode_enabled=true \
     setupwizard.feature.portal_notification=true
 
+# Google Assistant properties
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.opa.eligible_device=true \
+
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
