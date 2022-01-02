@@ -1,5 +1,7 @@
 $(call inherit-product, vendor/orgasmic/themes/themes.mk)
 
+LOCAL_PATH := vendor/orgasmic/config/permissions
+
 # Orgasmic packages
 PRODUCT_PACKAGES += \
     ThemePicker \
@@ -63,3 +65,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ProtonWallpaperStub \
 
+# Permissions for Google product apps
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/default-permissions-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions-product.xml \
