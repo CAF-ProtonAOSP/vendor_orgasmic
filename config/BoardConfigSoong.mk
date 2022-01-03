@@ -40,7 +40,7 @@ SOONG_CONFIG_orgasmicGlobalVars += \
     target_process_sdk_version_override \
     target_surfaceflinger_udfps_lib \
     target_uses_prebuilt_dynamic_partitions \
-    uses_camera_parameter_lib
+    uses_camera_parameter_lib \
     camera_needs_client_info
 
 SOONG_CONFIG_NAMESPACES += orgasmicNvidiaVars
