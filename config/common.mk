@@ -162,6 +162,12 @@ DEVICE_PACKAGE_OVERLAYS += vendor/orgasmic/overlay/common
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/orgasmic/config/partner_gms.mk
 
+TARGET_BUILD_GRAPHENEOS_CAMERA ?= true
+ifeq ($(strip $(TARGET_BUILD_GRAPHENEOS_CAMERA)),true)
+PRODUCT_PACKAGES += \
+    GrapheneOS-Camera
+endif
+
 # Versioning
 include vendor/orgasmic/config/version.mk
 
